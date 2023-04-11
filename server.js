@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const userRoutes = require('./routes/userRoutes')
-const roomRoutes=require('./routes/roomRoutes')
+const userRoutes = require('./routes/UserRoutes')
+const roomRoutes=require('./routes/RoomRoutes')
 const User = require('./models/User');
 const Message = require('./models/Message')
 const Room=require('./models/Room')
