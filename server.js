@@ -14,7 +14,7 @@ let rooms = [];
 
 async function loadRooms() {
   try {
-    const response = await fetch('http://localhost:5000/rooms');
+    const response = await fetch('https://chat-be-7sbj.onrender.com/rooms');
     rooms = await response.json();
     console.log('Rooms loaded:', rooms);
   } catch (e) {
@@ -34,7 +34,7 @@ const server = require('http').createServer(app);
 const PORT = 5000;
 const io = require('socket.io')(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'https://chat-fe-8kpa.onrender.com',
     methods: ['GET', 'POST']
   }
 })
